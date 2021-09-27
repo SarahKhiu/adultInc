@@ -24,7 +24,7 @@
   <div class="row">
    <div class="col-11 mx-auto pt-3">
     <!-- title -->
-    <h3 class="text-uppercase mb-4">your budget</h3>
+    <h2 class="text-uppercase mb-4">your budget</h2>
     <div class="row">
      <div class="col-md-5 my-3">
       <!-- budget feedback -->
@@ -67,16 +67,17 @@
       <div class="expense-feedback alert alert-danger text-capitalize">expense feedback</div>
       <!-- expense form -->
       <form id="expense-form" class=" expense-form">
-       <h5 class="text-capitalize">please enter your category</h5>
+       <h3 class="text-capitalize">please enter category</h3>
        <div class="form-group">
         <input type="text" class="form-control expense-input" id="expense-input">
        </div>
-       <h5 class="text-capitalize">please enter budget limit</h5>
+       <h3 class="text-capitalize">please enter budget limit</h3>
        <div class="form-group">
         <input type="number" class="form-control expense-input" id="amount-input">
        </div>
        <!-- submit button -->
-       <button type="submit" class="btn text-capitalize expense-submit" id="expense-submit">add expense</button>
+
+       <button type="submit" class="btn text-capitalize expense-submit" id="expense-submit">submit</button>
       </form>
      </div>
      <div class="col-md-7 my-3">
@@ -84,8 +85,8 @@
       <div class="expense-list" id="expense-list">
 
        <div class="expense-list__info d-flex justify-content-between text-capitalize">
-        <h5 class="list-item">category</h5>
-        <h5 class="list-item">budget limit set</h5>
+        <h3 class="list-item">category</h3>
+        <h3 class="list-item">budget limit set</h3>
         <h5 class="list-item"></h5>
        </div>
        <!-- single expense -->
@@ -136,33 +137,37 @@
 <br>
 
 <h3>Budget Breakdown</h3>
-<h4> Track current expenditure within budget limits</h4>
+<h5> Track current expenditure within budget limits</h5>
 
 <br>
+<div class="container" id="container">
+  <br>
+  <h4>Mortgage</h4>
+  <div class="progress" style="height: 20px;">
+    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+  </div>
+  <br>
+  <h4>Bills</h4>
+  <div class="progress" style="height: 20px;">
+    <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">35%</div>
+  </div>
+  <br>
+  <h4>Groceries</h4>
+  <div class="progress" style="height: 20px;">
+    <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+  </div>
+  <br>
+  <h4>Entertainment</h4>
+  <div class="progress" style="height: 20px;">
+    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+  </div>
+  <br>
+  <h4>Others</h4>
+  <div class="progress" style="height: 20px;">
+    <div class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10%</div>
+  </div>
+  
+  <div class="form-container sign-in-container">
 
-Mortage
-<div class="progress">
-    <div class="progress-bar" role="progressbar" style= "width: 25%" aria-valuenow="25%" aria-valuemin="0" aria-valuemax="100">25%</div>
-  </div>
- <br>
-Bills
-  <div class="progress">
-    <div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">35%</div>
-  </div>
-  <br>
-Groceries
-  <div class="progress">
-    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-  </div>
-  <br>
-Entertainment
-  <div class="progress">
-    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-  </div>
-  <br>
-  Others
-  <div class="progress">
-    <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10%</div>
-  </div>
 
 </html>
