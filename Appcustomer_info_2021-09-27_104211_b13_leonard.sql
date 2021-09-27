@@ -1,0 +1,11 @@
+/*!40101 SET NAMES utf8 */;
+/*!40014 SET FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET SQL_NOTES=0 */;
+DROP TABLE IF EXISTS Appcustomer_info;
+CREATE TABLE `Appcustomer_info` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) DEFAULT NULL,
+  `userpassword` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
