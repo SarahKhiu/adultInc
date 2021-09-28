@@ -14,35 +14,32 @@
     <h2 id="h1ref"> Manual Entry </h2>
 <div class="divsty dl">
 
-<h3> Categories: </h3>
-<select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-    <option selected>Select from these categories</option>
-    <option value="1">Mortgage</option>
-    <option value="2">Bills</option>
-    <option value="3">Groceries</option>
-    <option value="4">Entertainment</option>
-    <option value="5">Others</option>
-  </select>
+  <div class="container" id="container">
+        <h3> Categories:</h3>
+        <select class="containerbuttons1" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <option selected>Select from these categories</option>
+          <option value="1">Mortgage</option>
+          <option value="2">Bills</option>
+          <option value="3">Groceries</option>
+          <option value="4">Entertainment</option>
+          <option value="5">Others</option>
+        </select>
 
+        <h3>Date: </h3>
+
+          <input class="containerbuttons" type="date" name="date">
+      
+        <h3>Amount: </h3>
+        <input class="containerbuttons" type="text" id="custname" placeholder="Enter amount..." />
+
+        <h3>Remarks: </h3>  
+        <input class="containerbuttons" type="text" id="custname" placeholder="Enter remarks..." />
+  </div>
 <br>
-<h3>Date: </h3>
-
-<div>
-  <span></span> <input type="date" name="date">
-</div>
-
-
-<h3>Amount: </h3>
-<input type="text" id="custname" placeholder="Enter amount..." />
-
-<br>
-<h3>Remarks: </h3>  
-<input type="text" id="custname" placeholder="Enter remarks..." />
-</div>
-
 <br>
 
 <button>Submit</button>
+<br>
 <br>
 <button>Reset</button>
 
