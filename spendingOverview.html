@@ -1,85 +1,115 @@
 
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="spendingOverview.css">
-
-    <h2> Spending Chart</h2>
-
-    <div class="container">
-      <h3>Available Balance</h3>
-      <h4 id="balance">$0.00</h4>
-      
-    <br>
-      <h3>Spending Overview</h3>
-
         <!-- below is original pie chart-->
-      <script src="https://d3js.org/d3.v4.min.js"></script>
-      <script src=
-      "https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
-      <link
-        rel="stylesheet"
-        href=
-      "https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css"
-      />
-      <link
-        rel=
-      "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
-        type="text/css"
-      />
-      
-      <script src=
-      "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
-      </script>
-      <script src=
-      "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
-      </script>
-      
-      <script src=
-      "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js">
-      </script>
-      
-    
-        <!--<div class="col-xs-12 text-center">
-        <h2>Donut Chart</h2>
-        </div>-->
-      
-        <div id="donut-chart"></div>
-        <script>
-          var chart = bb.generate ({
-          data: {
-          columns: [
-            ["Blue", 2],
-            ["orange", 4],
-            ["green", 3],
-          ],
-          type: "donut",
-          onclick: function (d, i) {
-            console.log("onclick", d, i);
-          },
-          onover: function (d, i) {
-            console.log("onover", d, i);
-          },
-          onout: function (d, i) {
-            console.log("onout", d, i);
-          },
-          },
-          donut: {
-          title: "70",
-          },
-          bindto: "#donut-chart",
-        });
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <!-- <script src=
+        "https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
+        <link
+          rel="stylesheet"
+          href=
+        "https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css"
+        /> -->
+        <link
+          rel=
+        "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+          type="text/css"
+        />
+        
+        <script src=
+        "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
         </script>
+        <script src=
+        "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
+        </script>
+        
+        <script src=
+        "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js">
+        </script>
+    </head>
+    <h1>Overview</h1>
+    <div class="container">
+      <h2>Available Balance</h2>
+      <h3 id="balance">$0.00</h3>
+      <h2>Spending Overview</h2>
+      <div id="piechart" class=pie></div>
     </div>
-      <br>
+    <h1>Transaction History</h1>
+    <table id="transactionTable">
+      <tr>
+        <th>Categories</th>
+        <th>Date</th>
+        <th>Amount ($)</th>
+        <th>Remarks</th>
+      </tr>
+      <tr>
+        <td>Mortgage</td>
+        <td>2021-09-25</td>
+        <td>4500</td>
+        <td>SP Services</td>
+      </tr>
+      <tr>
+        <td>Bills</td>
+        <td>2021-09-20</td>
+        <td>1200</td>
+        <td>SP Services</td>
+      </tr>
+      <tr>
+        <td>Groceries</td>
+        <td>2021-09-19</td>
+        <td>800</td>
+        <td>Fair Price</td>
+      </tr>
+      <tr>
+        <td>Others</td>
+        <td>2021-09-15</td>
+        <td>3800</td>
+        <td>Gucci handbag</td>
+      </tr>
+      <tr>
+        <td>Entertainment</td>
+        <td>2021-09-10</td>
+        <td>2550</td>
+        <td>Family dinner</td>
+      </tr>
+    </table>
+
+    <h1>Manual Entry</h1>
+      <div class="container" id="container">
+            <h4> Categories:</4>
+            <br>
+            <br>
+            <select class="containerbuttons1" id="typeOfTransactions">
+              <option selected>Select from these categories</option>
+              <option value="1">Mortgage</option>
+              <option value="2">Bills</option>
+              <option value="3">Groceries</option>
+              <option value="4">Entertainment</option>
+              <option value="5">Others</option>
+            </select>
     
-      <h3>Transaction History</h3>
-      <ul class="list-group">
-        <li class="list-group-item">SP Service &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;20 Sep 2021</li>
-        <li class="list-group-item">Housing Loan &emsp;&emsp;&emsp;&emsp; 17 Sep 2021</li>
-        <li class="list-group-item">Uniqlo &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 10 Sep 2021</li>
-        <li class="list-group-item">Golden Village &emsp;&emsp;&emsp;&emsp; 6 Sep 2021</li>
-      </ul>
+            <h4>Date: </h4>
+    
+            <input class="containerbuttons" type="date" name="date" id="date">
+          
+            <h4>Amount ($): </h4>
+            <input class="containerbuttons" type="text" id="amount" placeholder="Enter amount..." />
+    
+            <h4>Remarks: </h4>  
+            <input class="containerbuttons" type="text" id="remark" placeholder="Enter remarks..." />
+        </div>  
+    <br>
+    <br>
+    
+    <button onclick="submitTransaction()">Submit</button>
+    <br>
+    <br>
+    </body>
+    <script src="spendingOverview.js"></script>
+</html>
