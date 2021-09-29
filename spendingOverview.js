@@ -99,7 +99,7 @@ function drawPie(){
       .attr('fill', function(d){ return(color(d.data.key)) })
       .attr("stroke", "black")
       .style("stroke-width", "2px")
-      .style("opacity", 0.7)
+      // .style("opacity", 0.7)
     
     // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
     svg
@@ -156,7 +156,7 @@ function refreshPie(){
   .attr('fill', function(d){ return(color(d.data.key)) })
   .attr("stroke", "black")
   .style("stroke-width", "2px")
-  .style("opacity", 0.7)
+  // .style("opacity", 0.7)
 
   svg
   .selectAll('whatever')
