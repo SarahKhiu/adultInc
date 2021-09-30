@@ -17,9 +17,9 @@ body {
 
 h1 {
 	text-align: center;
-    color: #00000;
+    color: #000;
     font-size: 45px;
-    font-family: 'Georgia'
+    font-family: 'Georgia';
 	font-weight: bold;
 	padding: 25px 0px 0px 10px;
 }
@@ -27,7 +27,7 @@ h1 {
 h2 {
 	color: #fff;
 	text-align: center;
-	font-family: 'Elephant'
+	font-family: 'roboto';
 	font-size: 30px;
 	padding: 40px 0px 0px 0px;
 	margin: 0;
@@ -38,6 +38,14 @@ h3 {
  	color: rgb(255, 250, 120);
 	font-family: 'roboto', sans-serif;
 	font-size: 30px;
+}
+
+h5 {
+	color: #fff;
+	text-align: center;
+	font-size: 30px;
+	padding: 40px 50px 50px 50px;
+	margin: 0;
 }
 
 .pie {
@@ -101,4 +109,18 @@ td {
   width: 160px;
   text-align: center;
   vertical-align: middle;
+}
+
+.button2 {
+	border-radius: 15px;
+	border: 1px solid #EB0A91;
+	background-color: #EB0A91;
+	color: #FFFFFF;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 12px 25px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	width: 30%;
 }
