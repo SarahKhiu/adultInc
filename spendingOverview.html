@@ -32,91 +32,91 @@
         <script src=
         "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js">
         </script>
-    </head>
-    <h1>Overview</h1>
-    <div class="container">
-      <button class="enableEthereumButton">Enable Ethereum</button>
-      <h2>Account: <span class="showAccount"></span></h2>
+  </head>
 
-      <h2>Available Balance</h2>
-      <h3 id="balance">$0.00</h3>
-      <h5><a href="yourBudget-folder\yourBudget.html" class="button2">Set Your Budget</a></h5>
-      <h2>Spending Overview</h2>
-      <div id="piechart" class=pie></div>
+  <body>
+    <div class="part1"></div>
+      <div class="container">
+          <h1>Overview</h1>
+            <br><br>
+            <a class="tokenButton">Link e-Wallet</a>
+            <a href="tokenOverview.html" class="tokenButton">My Token</a>
+            <br><br><br><br>
+            <h2>Account Available Balance <span class="showAccount"></span></h2>
+            <h3 id="balance">$0.00</h3>
+            <h5><a href="yourBudget-folder\yourBudget.html" class="button">Set Your Budget</a></h5>
+            <h2>Spending Overview</h2>
+            <div id="piechart" class=pie></div>
+      </div>
     </div>
-    <h1>Transaction History</h1>
-    <table id="transactionTable">
-      <tr>
-        <th>Categories</th>
-        <th>Date</th>
-        <th>Amount ($)</th>
-        <th>Remarks</th>
-      </tr>
-      <tr>
-        <td>Mortgage</td>
-        <td>2021-09-25</td>
-        <td>4500</td>
-        <td>My condo</td>
-      </tr>
-      <tr>
-        <td>Bills</td>
-        <td>2021-09-20</td>
-        <td>1200</td>
-        <td>SP Services</td>
-      </tr>
-      <tr>
-        <td>Groceries</td>
-        <td>2021-09-19</td>
-        <td>800</td>
-        <td>Fair Price</td>
-      </tr>
-      <tr>
-        <td>Others</td>
-        <td>2021-09-15</td>
-        <td>3800</td>
-        <td>Gucci handbag</td>
-      </tr>
-      <tr>
-        <td>Entertainment</td>
-        <td>2021-09-10</td>
-        <td>2550</td>
-        <td>Family dinner</td>
-      </tr>
-    </table>
+    <div class="part2">
+      <div class="container2">
+        <h1>Transaction History</h1>
+        <table id="transactionTable">
+          <tr>
+            <th>Categories</th>
+            <th>Date</th>
+            <th>Amount ($)</th>
+            <th>Remarks</th>
+          </tr>
+          <tr>
+            <td>Mortgage</td>
+            <td>2021-09-25</td>
+            <td>4500</td>
+            <td>My condo</td>
+          </tr>
+          <tr>
+            <td>Bills</td>
+            <td>2021-09-20</td>
+            <td>1200</td>
+            <td>SP Services</td>
+          </tr>
+          <tr>
+            <td>Groceries</td>
+            <td>2021-09-19</td>
+            <td>800</td>
+            <td>Fair Price</td>
+          </tr>
+          <tr>
+            <td>Others</td>
+            <td>2021-09-15</td>
+            <td>3800</td>
+            <td>Gucci handbag</td>
+          </tr>
+          <tr>
+            <td>Entertainment</td>
+            <td>2021-09-10</td>
+            <td>2550</td>
+            <td>Family dinner</td>
+          </tr>
+          </table>
+          <br><br>
+      </div>
+      <br>
+      <div class="container3" id="container">
+        <h1>Manual Entry</h1>
+        <h4> Categories:</4>
+        <br>
+        <br>
+          <select class="containerbuttons1" id="typeOfTransactions">
+            <option selected>Select from these categories</option>
+            <option value="1">Mortgage</option>
+            <option value="2">Bills</option>
+            <option value="3">Groceries</option>
+            <option value="4">Entertainment</option>
+            <option value="5">Others</option>
+          </select>
+        <h4>Date: </h4>
+          <input class="containerbuttons" type="date" name="date" id="date">
+        <h4>Amount ($): </h4>
+          <input class="containerbuttons" type="text" id="amount" placeholder="Enter amount..." />
+        <h4>Remarks: </h4>  
+          <input class="containerbuttons" type="text" id="remark" placeholder="Enter remarks..." />
+        <br><br><br>
+        <h5><a onclick="submitTransaction()" class="button">Submit</a></h5>
+      </div> 
+    </div> 
+  </body>
 
-    <h1>Manual Entry</h1>
-      <div class="container" id="container">
-            <h4> Categories:</4>
-            <br>
-            <br>
-            <select class="containerbuttons1" id="typeOfTransactions">
-              <option selected>Select from these categories</option>
-              <option value="1">Mortgage</option>
-              <option value="2">Bills</option>
-              <option value="3">Groceries</option>
-              <option value="4">Entertainment</option>
-              <option value="5">Others</option>
-            </select>
-    
-            <h4>Date: </h4>
-    
-            <input class="containerbuttons" type="date" name="date" id="date">
-          
-            <h4>Amount ($): </h4>
-            <input class="containerbuttons" type="text" id="amount" placeholder="Enter amount..." />
-    
-            <h4>Remarks: </h4>  
-            <input class="containerbuttons" type="text" id="remark" placeholder="Enter remarks..." />
-        </div>  
-    <br>
-    <br>
-    
-    <button onclick="submitTransaction()">Submit</button>
-    <br>
-    <br>
-    </body>
     <script src="spendingOverview.js"></script>
-
-
-    
 </html>

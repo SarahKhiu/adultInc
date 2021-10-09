@@ -9,10 +9,9 @@
 body {
 	background: #bdbdbd;
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	flex-direction: column;
-	font-family: 'Montserrat', sans-serif;
+	justify-content: center;
+	overflow: auto;
 }
 
 h1 {
@@ -29,7 +28,7 @@ h2 {
 	text-align: center;
 	font-family: 'roboto';
 	font-size: 30px;
-	padding: 40px 0px 0px 0px;
+	padding: 20px 0px 0px 0px;
 	margin: 0;
 }
 
@@ -40,19 +39,6 @@ h3 {
 	font-size: 30px;
 }
 
-h5 {
-	color: #fff;
-	text-align: center;
-	font-size: 30px;
-	padding: 40px 50px 50px 50px;
-	margin: 0;
-}
-
-.pie {
-	border: none;
-	padding: 0px 23px;
-}
-
 h4 {
 	text-align: center;
     color: #000;
@@ -60,27 +46,12 @@ h4 {
     font-size: 20px;
 }
 
-.container {
-	background-color: #3FA0A8;
-	border-radius: 10px;
-  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-			0 10px 10px rgba(0,0,0,0.22);
-	position: relative;
-	overflow: hidden;
-	width: 400px;
-	max-width: 100%;
-	min-height: 495px;
-	display: block;
-}
-
-.containerbuttons {
-	align-items: center;
-	margin-left: 6em;
-}
-
-.containerbuttons1 {
-	padding: 10px 15px;
-	align-items: center;
+h5 {
+	color: #fff;
+	text-align: center;
+	font-family: 'roboto';
+	padding: 0px 0px 60px;
+	margin: auto;
 }
 
 input {
@@ -90,37 +61,69 @@ input {
 	text-align: center;
 }
 
-button {
-	border-radius: 15px;
-	border: 1px solid #EB0A91;
-	background-color: #EB0A91;
-	color: #FFFFFF;
-	font-size: 15px;
-	font-weight: bold;
-	padding: 12px 25px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	transition: transform 80ms ease-in;
-	width: 15%;
-}
-
 td {
-  height: 30px;
-  width: 160px;
-  text-align: center;
-  vertical-align: middle;
+	height: 30px;
+	width: 160px;
+	text-align: center;
+	vertical-align: middle;
+  }
+
+.pie {
+	border: none;
+	padding: 0px 120px;
 }
 
-.button2 {
+.container, .container2, .container3 {
+	background-color: #3FA0A8;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	width: 580px;
+	margin: 3%;
+}
+
+.button{
 	border-radius: 15px;
 	border: 1px solid #EB0A91;
 	background-color: #EB0A91;
 	color: #FFFFFF;
 	font-size: 15px;
 	font-weight: bold;
-	padding: 12px 25px;
+	padding: 12px 50px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	transition: transform 80ms ease-in;
-	width: 30%;
+	align-content: center;
 }
+
+.tokenButton{
+	border-radius: 15px;
+	border: 1px solid #EB0A91;
+	background-color: #EB0A91;
+	color: #FFFFFF;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 12px 50px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-family: 'roboto';
+	margin: 0px 41px;
+}
+
+.button:hover {
+	background-color: #c51880;
+}
+
+.tokenButton:hover {
+	background-color: #c51880;
+}
+
+.containerbuttons {
+	align-items: center;
+	margin-left: 9em;
+}
+
+.containerbuttons1 {
+	padding: 10px 15px;
+	align-items: center;
+}
+
