@@ -2,4 +2,4 @@
 Group-2
 example
 
-Credit to jacobedawson for the linkages to metamask
+Credit to https://github.com/jacobedawson/connect-metamask-react-dapp for the linkages to metamask
